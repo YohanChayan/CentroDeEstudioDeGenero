@@ -1,13 +1,13 @@
-@extends('layouts.app')
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 
 <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/blog/">
 <!-- Bootstrap core CSS -->
 <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- Custom styles for this template -->
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
-<link href="{{asset('LandingPage/css/blog.css')}}" rel="stylesheet">
+<link href="<?php echo e(asset('LandingPage/css/blog.css')); ?>" rel="stylesheet">
 
 <!-- <style>
   .carousel .carousel-item {
@@ -37,13 +37,13 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="{{asset('img/Banner-Podcast.png')}}" class="img-fluid d-block" alt="...">
+              <img src="<?php echo e(asset('img/Banner-Podcast.png')); ?>" class="img-fluid d-block" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="{{asset('img/Banner-Podcast.png')}}" class="img-fluid d-block w-100 h-70" alt="...">
+              <img src="<?php echo e(asset('img/Banner-Podcast.png')); ?>" class="img-fluid d-block w-100 h-70" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="{{asset('img/Banner-Podcast.png')}}" class="img-fluid d-block w-100 h-50" alt="...">
+              <img src="<?php echo e(asset('img/Banner-Podcast.png')); ?>" class="img-fluid d-block w-100 h-50" alt="...">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -61,7 +61,7 @@
   </div>
 </div>
 
-<link href="{{asset('LandingPage/css/carousel.css')}}" rel="stylesheet">
+<link href="<?php echo e(asset('LandingPage/css/carousel.css')); ?>" rel="stylesheet">
 
 <div class="container">
 
@@ -136,11 +136,12 @@
 
   <div class="col-md-12 mb-3">
     <div class="card bg-dark text-white">
-      <img src="{{asset('img/pageHeaderLogoImage_es_ES.png')}}" class="card-img" alt="...">
+      <img src="<?php echo e(asset('img/pageHeaderLogoImage_es_ES.png')); ?>" class="card-img" alt="...">
       <div class="card-img-overlay">
         <h5 class="card-title revista-la-ventana" id="Revista La Ventana">Revista La Ventana</h5>
         <p class="card-text revista-la-ventana">
           Revista de Estudios de Género, La Ventana es una publicación semestral de carácter multidisciplinario del Centro Universitario de Ciencias Sociales y Humanidades de la Universidad de Guadalajara correspondiente al Centro de Estudios de Género.
+
           Su propósito es investigar sobre la relación y evolución de la condición femenina y la condición masculina. Trata de identificar las funciones y los verdaderos compromisos de toda retórica sobre el género, ya sea que estos compromisos se originen en los poderes, en los individuos o en los grupos.</p><a href="http://revistalaventana.cucsh.udg.mx/index.php/LV" target="_blank" class="text-white pe-2">Ir a la ventana</a><i class="fa fa-arrow-right"></i>
       </div>
     </div>
@@ -152,14 +153,14 @@
       <div class="card">
         <div class="row">
           <div class="col-sm-1 col-md-2">
-            <img src="{{asset('img/simple-normal.png')}}" class="img-fluid rounded-start" style="height: 100%; width: 100%; display: block;" alt="Podcast - Otra ventana al género">
+            <img src="<?php echo e(asset('img/simple-normal.png')); ?>" class="img-fluid rounded-start" style="height: 100%; width: 100%; display: block;" alt="Podcast - Otra ventana al género">
           </div>
           <div class="col-md-8">
             <div class="card-body md-12">
               <h5 class="card-title">Podcast - Otra ventana al género</h5>
               <p class="card-text" style="text-align:justify;">Esto es Otra ventana al género. Podcast de promoción y divulgación de debates e investigaciones académicas sobre género con episodios de comentarios entrevistas, reseñas y agenda de actividades.
                 Con la producción académica de Marisa Martínez del cuerpo académico Género, cultura y relaciones sociales CA-UDG-490 y el apoyo del equipo del Centro de Estudios de Género y la Revista de Estudios de Género La Ventana de la Universidad de Guadalajara.</p>
-              <p class="card-text"><a href="{{route('Otra-Ventana-Podcast')}}" class="text-dark"><small class="text-muted pe-2">Ver todos los podcast</small><i class="fa fa-arrow-right pe-4"></i></a><a href="https://open.spotify.com/show/38deWOD94zSGJXhUwYnfTJ?si=770ac524704647bd&nd=1" class="text-dark"> Ir a Spotify <i class="fab fa-spotify"></i></a></p>
+              <p class="card-text"><a href="<?php echo e(route('Otra-Ventana-Podcast')); ?>" class="text-dark"><small class="text-muted pe-2">Ver todos los podcast</small><i class="fa fa-arrow-right pe-4"></i></a><a href="https://open.spotify.com/show/38deWOD94zSGJXhUwYnfTJ?si=770ac524704647bd&nd=1" class="text-dark"> Ir a Spotify <i class="fab fa-spotify"></i></a></p>
             </div>
           </div>
         </div>
@@ -176,7 +177,7 @@
     <div class="container">
       <div class="card">
         <h3 class="text-dark" style="text-align:center;">Centro de Documentación - Simone de Beauvoir</h3>
-        <img src="{{asset('img/librería.png')}}" class="card-img-top" alt="..." height="300">
+        <img src="<?php echo e(asset('img/librería.png')); ?>" class="card-img-top" alt="..." height="300">
 
         <div class="card-body">
           <h5 class="card-title">Bienvenido a la biblioteca Simone de Beauvoir</h5>
@@ -187,12 +188,12 @@
     </div>
 
   </div>
-  {{-- End div main container --}}
+  
 
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="{{asset('LandingPage_template/template1/js/scripts.js')}}"></script>
+  <script src="<?php echo e(asset('LandingPage_template/template1/js/scripts.js')); ?>"></script>
   <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
   <script>
@@ -207,4 +208,5 @@
       //console.log(show.style.display);
     }
   </script>
-  @endsection
+  <?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\CentroDeEstudioDeGenero\resources\views/welcome.blade.php ENDPATH**/ ?>

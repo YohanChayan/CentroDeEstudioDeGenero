@@ -6,11 +6,11 @@
 <!-- navbar navbar-expand-lg" style="background:#195270 -->
 <nav class="navbar navbar-light navbar-expand-md sticky-top shadow-lg" style="background:#e1251b">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="{{asset('/img/CEG.png')}}" alt="logoCEG" class="rounded-circle" style="min-height: 50px; padding-top: 0px; height: 100PX;">
+        <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
+            <img src="<?php echo e(asset('/img/CEG.png')); ?>" alt="logoCEG" class="rounded-circle" style="min-height: 50px; padding-top: 0px; height: 100PX;">
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="<?php echo e(__('Toggle navigation')); ?>">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -19,7 +19,7 @@
         <ul class="navbar-nav ms-auto">
 
         <li class="nav-item">
-            <a href="{{route('welcome')}}" class="nav-link text-white">
+            <a href="<?php echo e(route('welcome')); ?>" class="nav-link text-white">
                 Inicio
             </a>
         </li>
@@ -34,16 +34,16 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="{{route('Otra-Ventana-Podcast')}}" class="nav-link text-white">
+            <a href="<?php echo e(route('Otra-Ventana-Podcast')); ?>" class="nav-link text-white">
             <i class="fab fa-spotify pe-1"></i>Otra Ventana (Podcast)</a>
         </li>
         <li class="nav-item">
-            <a href="{{route('Centro-de-Documentacion')}}" class="nav-link text-white">
+            <a href="<?php echo e(route('Centro-de-Documentacion')); ?>" class="nav-link text-white">
                 Centro de Documentación
             </a>
         </li>
         <li class="nav-item">
-            <a href="{{route('blog')}}" class="nav-link text-white">
+            <a href="<?php echo e(route('blog')); ?>" class="nav-link text-white">
                 Blog
             </a>
         </li>
@@ -53,37 +53,39 @@
             </a>
         </li>
             <!-- Authentication Links -->
-            @guest
-            @if (Route::has('login'))
+            <?php if(auth()->guard()->guest()): ?>
+            <?php if(Route::has('login')): ?>
             <li class="nav-item">
-                <a class="nav-link text-white" href="{{ route('login') }}">{{ __('Iniciar sesión') }}</a>
+                <a class="nav-link text-white" href="<?php echo e(route('login')); ?>"><?php echo e(__('Iniciar sesión')); ?></a>
             </li>
-            @endif
+            <?php endif; ?>
 
-            @if (Route::has('register'))
+            <?php if(Route::has('register')): ?>
             <li class="nav-item">
-                <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
+                <a class="nav-link text-white" href="<?php echo e(route('register')); ?>"><?php echo e(__('Registrarse')); ?></a>
             </li>
-            @endif
-            @else
+            <?php endif; ?>
+            <?php else: ?>
             <li class="nav-item dropdown">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    {{ Auth::user()->name }}
+                    <?php echo e(Auth::user()->name); ?>
+
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item text-white" href="{{ route('logout') }}" onclick="event.preventDefault();
+                    <a class="dropdown-item text-white" href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
+                        <?php echo e(__('Logout')); ?>
+
                     </a>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
+                    <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none">
+                        <?php echo csrf_field(); ?>
                     </form>
                 </div>
             </li>
-            @endguest
+            <?php endif; ?>
         </ul>
     </div>
     </div>
-</nav>
+</nav><?php /**PATH C:\xampp\htdocs\CentroDeEstudioDeGenero\resources\views/layouts/navbar2.blade.php ENDPATH**/ ?>
