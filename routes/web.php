@@ -27,12 +27,17 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', [App\Http\Con
 Route::get('/Blog', function () {
     return view('Blog');
 })->name('blog');
+
 Route::get('/Revista-La-Ventana', function () {
     return view('Revista-La-Ventana');
 })->name('Revista-La-Ventana');
+
 Route::get('/Otra-Ventana-Podcast', function () {
     return view('Otra-Ventana-Podcast');
 })->name('Otra-Ventana-Podcast');
-Route::get('/Centro-de-Documentacion', function () {
-    return view('Centro-de-Documentacion');
-})->name('Centro-de-Documentacion');
+
+Route::get('/Encuestas', function () {
+    return view('Encuestas');
+})->name('Encuestas');
+
+Route::get('/Centro-de-Documentacion', [App\Http\Controllers\CentroDocumentacionController::class, 'index'])->name('Centro-de-Documentacion');
