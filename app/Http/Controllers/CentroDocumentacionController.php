@@ -16,7 +16,7 @@ class CentroDocumentacionController extends Controller
     {
         $libros = CentroDocumentacion::all();
         $documentacion = $this->cargarDT($libros);
-        return view('Centro-de-Documentacion')->with('documentacion', $documentacion)->with('libros', $libros);
+        return view('Centro-Documentacion.index')->with('documentacion', $documentacion)->with('libros', $libros);
     }
 
     public function cargarDT($consulta)

@@ -32,19 +32,24 @@
                     </a>
                 </li>
                 <li class="nav-item" style="font-family: 'Filson Pro', sans-serif;">
-                    <a href="{{ route('Otra-Ventana-Podcast') }}" class="nav-link text-white">
+                    <a href="{{ route('podcast.index') }}" class="nav-link text-white">
                         <i class="fab fa-spotify pe-1"></i>Otra Ventana (Podcast)</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('Centro-de-Documentacion') }}" class="nav-link text-white"
+                    <a href="{{ route('centrodocumentacion.index') }}" class="nav-link text-white"
                         style="font-family: 'Filson Pro', sans-serif;">
                         Centro de Documentación
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('blog') }}" class="nav-link text-white"
+                    <a href="{{ route('blog.index') }}" class="nav-link text-white"
                         style="font-family: 'Filson Pro', sans-serif;">
                         Blog
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('encuestas.index') }}" class="nav-link text-white" style="font-family: 'Filson Pro', sans-serif;">
+                        Encuestas
                     </a>
                 </li>
                 <li class="nav-item">
@@ -52,11 +57,7 @@
                         Contacto
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{ route('Encuestas') }}" class="nav-link text-white" style="font-family: 'Filson Pro', sans-serif;">
-                        Encuestas
-                    </a>
-                </li>
+                
                 <!-- Authentication Links -->
                 @guest
                     @if (Route::has('login'))

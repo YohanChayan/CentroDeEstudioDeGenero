@@ -1,8 +1,8 @@
-
-<?php $__env->startSection('content'); ?>
+@extends('layouts.app')
+@section('content')
 <div class="container">
     <h1 class="text-center text-warning">Encuestas</h1>
-<img src="<?php echo e(asset('img/Nuestras Voces.png')); ?>" alt="Nuestras-voces"  class="mb-4 sm-12" width="100%">
+<img src="{{asset('img/Nuestras Voces.png')}}" alt="Nuestras-voces"  class="mb-4 sm-12" width="100%">
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptatibus, consequatur culpa iure temporibus corrupti esse est ad unde asperiores ea expedita atque nobis? Voluptates ratione excepturi voluptatibus optio praesentium!</p>
 <div class="accordion accordion-flush" id="accordionFlushExample">
     <div class="accordion-item">
@@ -38,5 +38,4 @@
   </div>
 
 </div>
-<?php $__env->stopSection(); ?>
-<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\CentroDeEstudioDeGenero\resources\views/Encuestas.blade.php ENDPATH**/ ?>
+@endsection

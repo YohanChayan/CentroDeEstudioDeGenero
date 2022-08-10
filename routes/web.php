@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::resource('blog','App\Http\Controllers\BlogController');
+Route::resource('centrodocumentacion','App\Http\Controllers\CentroDocumentacionController');
+Route::resource('encuestas','App\Http\Controllers\EncuestasController');
+Route::resource('podcast','App\Http\Controllers\PodcastController');
+
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
@@ -24,20 +29,27 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', [App\Http\Con
 // Auth::routes();
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/Blog', function () {
-    return view('Blog');
-})->name('blog');
+//Podcast
+Route::get('/delete_podcast/{id}', array(
+    'as' => 'delete_podcast',
+    'middleware' => 'auth',
+    'uses' => 'App\Http\Controllers\PodcastController@delete_podcast'
+));
 
-Route::get('/Revista-La-Ventana', function () {
-    return view('Revista-La-Ventana');
-})->name('Revista-La-Ventana');
+// Route::get('/Blog', function () {
+//     return view('Blog');
+// })->name('blog');
 
-Route::get('/Otra-Ventana-Podcast', function () {
-    return view('Otra-Ventana-Podcast');
-})->name('Otra-Ventana-Podcast');
+// Route::get('/Revista-La-Ventana', function () {
+//     return view('Revista-La-Ventana');
+// })->name('Revista-La-Ventana');
 
-Route::get('/Encuestas', function () {
-    return view('Encuestas');
-})->name('Encuestas');
+// Route::get('/Otra-Ventana-Podcast', function () {
+//     return view('Otra-Ventana-Podcast');
+// })->name('Otra-Ventana-Podcast');
 
-Route::get('/Centro-de-Documentacion', [App\Http\Controllers\CentroDocumentacionController::class, 'index'])->name('Centro-de-Documentacion');
+// Route::get('/Encuestas', function () {
+//     return view('Encuestas');
+// })->name('Encuestas');
+
+// Route::get('/Centro-de-Documentacion', [App\Http\Controllers\CentroDocumentacionController::class, 'index'])->name('Centro-de-Documentacion');

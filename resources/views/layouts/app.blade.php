@@ -87,13 +87,13 @@
                             <a href="http://revistalaventana.cucsh.udg.mx/index.php/LV" target="_blank" class="text-white" style="font-family: 'Filson Pro', sans-serif;"><i class="fa fa-clipboard pe-3" aria-hidden="true"></i>Revista la ventana</a>
                         </li>
                         <li class="mb-2">
-                            <a href="{{ route('Otra-Ventana-Podcast') }}" class="text-white" style="font-family: 'Filson Pro', sans-serif;"><i class="fab fa-spotify pe-3"></i>Otra Ventana (Podcast)</a>
+                            <a href="{{ route('podcast.index') }}" class="text-white" style="font-family: 'Filson Pro', sans-serif;"><i class="fab fa-spotify pe-3"></i>Otra Ventana (Podcast)</a>
                         </li>
                         <li class="mb-2">
-                            <a href="{{ route('Centro-de-Documentacion') }}" class="text-white" style="font-family: 'Filson Pro', sans-serif;"><i class="fas fa-server pe-3"></i>Centro de Documentación</a>
+                            <a href="{{ route('centrodocumentacion.index') }}" class="text-white" style="font-family: 'Filson Pro', sans-serif;"><i class="fas fa-server pe-3"></i>Centro de Documentación</a>
                         </li>
                         <li class="mb-2">
-                            <a href="{{ route('Encuestas') }}" class="text-white" style="font-family: 'Filson Pro', sans-serif;"><i class="fas fa-server pe-3"></i>Encuestas</a>
+                            <a href="{{ route('encuestas.index') }}" class="text-white" style="font-family: 'Filson Pro', sans-serif;"><i class="fas fa-server pe-3"></i>Encuestas</a>
                         </li>
                         <li class="mb-2">
                             <a href="#!" class="text-white" style="font-family: 'Filson Pro', sans-serif;" id="Contacto"><i class="fas fa-phone pe-3"></i>Contacto</a>
